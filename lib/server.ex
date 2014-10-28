@@ -53,7 +53,7 @@ defmodule Stat.Server do
 		{
 			:reply,
 			map,
-			add_proc(map, id, state) |> Tinca.put(:state)
+			HashUtils.to_map(map) |> add_proc( id, state) |> Tinca.put(:state)
 		}
 	end
 
